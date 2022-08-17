@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #box {
+            border: 1px solid blue;
+            padding: 20px;
+        }
+
+
+
+       #box > div {
+           border: 2px solid black;
+           margin: 20px;
+        }
+
+       img {
+        margin: 15px;
+        height: 250px;
+       }
+       
+    </style>
+</head>
+<body>
+    <div id="box">
+        <!-- <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+
+        </div>
+        <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+
+        </div>
+        <div>
+            <img src="images/1.jpg" alt="">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+
+        </div>
+        <div>
+            <img src="images/1.jpg">
+            <img src="images/2.jpg" alt="">
+            <img src="images/3.jpg" alt="">
+
+        </div> -->
+    </div>
+
+    <script>  
+
+    let s = " ", pic = 1;
+    let d = prompt("Введите кол-во блоков:");
+    let k = prompt("Введите кол-во картинок в блоке от 1 до 11:")
+    ;
+    
+
+  
+
+        for (i=1; i<=d; i++) {
+            s += "<div>";
+               
+                for (j=1; j<=k; j++) {
+                    if (pic>11) pic =1;
+                     s += `<img src="images/${pic++}.jpg">`;
+                    
+                }
+                pic=1;
+
+            s += "</div>";  
+        }  
+        box.innerHTML = s;
+                
+    
+ 
+
+   
+    
+    </script>
+    
+    
+</body>
+</html>
